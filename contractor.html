@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="contractor-page">
+    <header>
+        <nav>
+            <a href="index.html">← Back to Home</a>
+        </nav>
+    </header>
+    <div class="page-container">
+        <h1>Contractor Services: Add Contract</h1>
+        <form id="contractForm">
+            <div class="form-group">
+                <label for="cropType">Crop Type:</label>
+                <select id="cropType" required>
+                    <option value="">--Select a crop--</option>
+                    <option value="wheat">Wheat</option>
+                    <option value="rice">Rice</option>
+                    <option value="corn">Corn</option>
+                    <option value="soybean">Soybean</option>
+                    <option value="potato">Potato</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity (kg):</label>
+                <input type="number" id="quantity" required min="1">
+            </div>
+            <div class="form-group">
+                <label for="price">Price per kg (₹):</label>
+                <input type="number" id="price" required min="0" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="totalValue">Total Value (₹):</label>
+                <input type="number" id="totalValue" readonly>
+            </div>
+            <div class="form-group">
+                <label for="advancePayment">Advance Payment (%):</label>
+                <input type="number" id="advancePayment" required min="0" max="100">
+            </div>
+            <div class="form-group">
+                <label for="advanceAmount">Advance Amount (₹):</label>
+                <input type="number" id="advanceAmount" readonly>
+            </div>
+            <div class="form-group">
+                <label for="deliveryDate">Delivery Date:</label>
+                <input type="date" id="deliveryDate" required>
+            </div>
+            <button type="submit">Add Contract</button>
+        </form>
+        <div id="contractDetails"></div>
+        <div class="payment-buttons">
+            <button id="paymentBtn" class="payment-btn">Make Full Payment</button>
+            <button id="advancePaymentBtn" class="payment-btn">Make Advance Payment</button>
+        </div>
+        <img id="cropImage" src="" alt="Crop Image" style="display: none;">
+    </div>
+    <script src="contractor.js"></script>
+</body>
+</html>

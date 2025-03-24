@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="farmer-page">
+    <header>
+        <nav>
+            <a href="index.html">← Back to Home</a>
+        </nav>
+    </header>
+    <div class="page-container">
+        <h1>Farmer Services: Search for Contracts</h1>
+        <div class="form-group">
+            <label for="cropType">Select Crop Type:</label>
+            <select id="cropType">
+                <option value="">--Select a crop--</option>
+                <option value="wheat">Wheat</option>
+                <option value="rice">Rice</option>
+                <option value="corn">Corn</option>
+                <option value="soybean">Soybean</option>
+                <option value="potato">Potato</option>
+            </select>
+        </div>
+        <button id="searchBtn">Search Contracts</button>
+        <div id="searchResults"></div>
+    </div>
+    <script src="farmer.js"></script>
+</body>
+</html>

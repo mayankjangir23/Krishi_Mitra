@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrishiMitra - Empowering Farmers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="image.png" alt="KrisiMitra Logo">
+            </div>
+            <nav>
+                <ul class="nav-items">
+                    <div id="nav-right">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#feedback">Feedback</a></li>
+                    </div>
+                    <div id="nav-left">
+                        <li><a href="#login">Login</a></li>
+                        <li><a href="#signup">Signup</a></li>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<div class="slideshow-container">
+        <div class="image-container">
+            <img src="image1.jpeg" alt="Image 1" class="slide-image">
+            <img src="image2.png" alt="Image 2" class="slide-image">
+            <img src="image3.jpg" alt="Image 3" class="slide-image">
+            <img src="image4.png" alt="Image 4" class="slide-image">
+        </div>
+    </div>
+
+    <section id="home">
+        <div class="home-content">
+            <h1>Welcome to KrishiMitra</h1>
+            <p>Your trusted partner in contract farming. We connect farmers with buyers through a seamless and reliable platform, ensuring fair agreements and stable incomes.</p>
+        </div>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to KrishiMitra, your go-to platform for contract farming solutions. We are dedicated to bridging the gap between farmers and buyers through a streamlined and transparent contract farming system.</p>
+        
+        <h3>Our Mission</h3>
+        <p>Our mission is to empower farmers by providing them with a reliable marketplace for their produce. By offering secure and transparent contract farming agreements, we aim to stabilize incomes, reduce market risks, and foster long-term relationships between farmers and buyers.</p>
+        
+        <h3>Our Vision</h3>
+        <p>We envision a world where every farmer has access to a stable and predictable income through guaranteed contracts, and where buyers can easily source high-quality produce from trusted suppliers. Our goal is to create a more equitable and efficient agricultural supply chain.</p>
+        
+        <h3>What We Do</h3>
+        <p>KrishiMitra connects farmers with buyers through an intuitive online platform that facilitates:</p>
+        <ul>
+            <li><strong>Contract Management:</strong> Our platform enables farmers and buyers to create and manage contracts with clear terms, reducing misunderstandings and disputes.</li>
+            <li><strong>Price Negotiation:</strong> We provide tools for fair and transparent price negotiations, ensuring that both parties agree on a price that reflects the value of the produce.</li>
+            <li><strong>Secure Payment Processing:</strong> Timely and secure payments are crucial for maintaining trust. Our platform ensures that farmers receive payments promptly upon delivery of their produce.</li>
+        </ul>
+        
+        <h3>Our Values</h3>
+        <ul>
+            <li><strong>Integrity:</strong> We believe in transparent and honest dealings. Our platform is designed to foster trust and reliability between all parties.</li>
+            <li><strong>Innovation:</strong> We are committed to continuously improving our services and leveraging technology to meet the evolving needs of farmers and buyers.</li>
+            <li><strong>Empowerment:</strong> Our focus is on empowering farmers by giving them control over their contracts and market access, leading to sustainable livelihoods.</li>
+            <li><strong>Sustainability:</strong> We are dedicated to promoting sustainable agricultural practices that benefit both the environment and the farming community.</li>
+        </ul>
+        
+        <h3>Our Team</h3>
+        <p>Our team comprises professionals with extensive experience in agriculture, technology, and business management. We are passionate about making a positive impact in the agricultural sector and are committed to supporting farmers and buyers in achieving their goals.</p>
+        
+        <h3>Contact Us</h3>
+        <p>If you have any questions or would like to learn more about our services, please do not hesitate to get in touch with us. We are here to assist you and ensure a smooth experience with KrisiMitra.</p>
+    </section>
+    <section id="services">
+       
+        <div class="container">
+            <div class="buttons">
+                <!-- The button will be dynamically added here by JavaScript -->
+            </div>
+        </div>
+    </section>
+    <!-- Update other input fields to include the microphone icon -->
+<!-- For example, in the farmer form -->
+<div id="farmer-form" class="form-container" style="display: none;">
+    <h3>Farmer: Add Your Crop Details</h3>
+    <form id="farmerForm">
+        <div class="input-with-mic">
+            <input type="text" id="cropType" name="cropType" required placeholder="Crop Type">
+            <img src="mike.png" alt="Microphone" class="mic-icon">
+        </div>
+        
+        <div class="input-with-mic">
+            <input type="number" id="cropQuantity" name="cropQuantity" required placeholder="Quantity (in kg)">
+            <img src="mike.png" alt="Microphone" class="mic-icon">
+        </div>
+
+        <button type="button" onclick="submitFarmerForm()">Submit</button>
+    </form>
+    <div id="farmer-data"></div>
+</div>
+
+<!-- Similarly, update the contractor search form -->
+<div id="contractor-search" class="search-container" style="display: none;">
+    <h3>Contractor: Search for Crops</h3>
+    <form id="contractorForm">
+        <div class="input-with-mic">
+            <input type="text" id="searchCropType" name="searchCropType" required placeholder="Crop Type">
+            <img src="mike.png" alt="Microphone" class="mic-icon">
+        </div>
+        
+        <div class="input-with-mic">
+            <input type="number" id="searchCropQuantity" name="searchCropQuantity" required placeholder="Quantity Needed (in kg)">
+            <img src="mike.png" alt="Microphone" class="mic-icon">
+        </div>
+
+        <button type="button" onclick="submitContractorSearch()">Search</button>
+    </form>
+    <div id="contractor-results"></div>
+</div>
+    <section id="feedback" class="feedback-section">
+        <h2>We Value Your Feedback</h2>
+        <p>Your opinion helps us improve KrisiMitra. Please share your thoughts, suggestions, or any issues you’ve encountered. We’re committed to providing the best platform for farmers and buyers.</p>
+    
+        <form id="feedbackForm" action="#" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name..." required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email..." required>
+    
+            <label for="feedback-message">Your Feedback:</label>
+            <textarea id="feedback-message" name="feedback-message" placeholder="Write your feedback here..." rows="5" required></textarea>
+    
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </section>
+
+    <!-- Modal -->
+    <div id="userTypeModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Welcome to KrishiMitra</h2>
+            <p>Please select your role:</p>
+            <div class="modal-buttons">
+                <button onclick="setUserType('farmer')">Farmer</button>
+                <button onclick="setUserType('contractor')">Contractor</button>
+            </div>
+        </div>
+    </div>
+    <!-- Update the chatbox section -->
+<!-- Update the chatbot section -->
+<section id="chatbot">
+    <div class="chat-container">
+        <div class="chat-header">
+            <h3>Sahayak - AI Chatbot</h3>
+            <button id="close-chat">X</button>
+        </div>
+        <div class="chat-messages">
+            <!-- Messages will be added here dynamically -->
+        </div>
+        <div class="chat-input">
+            <div class="input-with-mic">
+                <input type="text" id="user-input" placeholder="Type your message...">
+                <img src="mike.png" alt="Microphone" class="mic-icon">
+            </div>
+            <button id="send-message">Send</button>
+        </div>
+    </div>
+    <button id="open-chat">Chat with Sahayak</button>
+</section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About KrishiMitra</h3>
+                <p>KrishiMitra is dedicated to empowering farmers by providing them with reliable market access through secure contract farming agreements. We bridge the gap between farmers and buyers, ensuring stability and fairness for all parties involved.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@krishimitra.com</p>
+                <p>Phone: +91 1234 567 890</p>
+                <p>Address: 123 Green Lane, Agricultural District, India</p>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="#" target="_blank">Facebook</a> | 
+                <a href="#" target="_blank">Twitter</a> | 
+                <a href="#" target="_blank">Instagram</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 KrishiMitra. All Rights Reserved.</p>
+            <p><a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
